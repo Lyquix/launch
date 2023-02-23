@@ -210,7 +210,7 @@ while true; do
 			break
 			;;
 		[Nn]* )
-			printf "Remember to clean up the following files and directories:\n"
+			printf "Remember to clean up the files and directories listed above!\n"
 
 			break
 			;;
