@@ -138,7 +138,7 @@ printf $DIVIDER
 
 # Download Search-Replace-DB and update domains
 printf "Downloading Search-Replace-DB...\n"
-wget -q -O srdb.zip https://github.com/interconnectit/Search-Replace-DB/archive/28a1f059e4739bca618056dcf3c550a634cf1035.zip
+wget -q -O srdb.zip https://github.com/interconnectit/Search-Replace-DB/archive/refs/heads/master.zip
 printf "Extracting Search-Replace-DB...\n"
 unzip -q srdb.zip
 mv Search-Replace-DB-* srdb
