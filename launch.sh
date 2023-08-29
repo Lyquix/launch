@@ -143,7 +143,7 @@ printf "Extracting Search-Replace-DB...\n"
 unzip -q srdb.zip
 mv Search-Replace-DB-* srdb
 printf "Search-Replace the development domain to the production domain...\n"
-php srdb/srdb.cli.php -h localhost -n $dbname -u $dbuser -p $dbpass -s $devdomain -r $domain
+php srdb/srdb.cli.php -h localhost -n $dbname -u $dbuser -p '$dbpass' -s $devdomain -r $domain
 rm -r srdb*
 
 printf $DIVIDER
