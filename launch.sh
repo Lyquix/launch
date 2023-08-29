@@ -140,7 +140,7 @@ printf $DIVIDER
 printf "Downloading Search-Replace-DB...\n"
 wget -q -O srdb.zip https://github.com/interconnectit/Search-Replace-DB/archive/refs/heads/master.zip
 printf "Extracting Search-Replace-DB...\n"
-unzip -q master.zip
+unzip -q srdb.zip
 mv Search-Replace-DB-* srdb
 printf "Search-Replace the development domain to the production domain...\n"
 php srdb/srdb.cli.php -h localhost -n $dbname -u $dbuser -p $dbpass -s $devdomain -r $domain
