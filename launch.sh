@@ -124,15 +124,15 @@ printf $DIVIDER
 
 # Backup production database pre-launch
 printf "Backing up the pre-launch production database...\n"
-mysqldump -u $dbuser -p$dbpass $dbname > /srv/www/$directory/$dbname-backup-prelaunch-$TS.sql
+mysqldump -u $dbuser -p'$dbpass' $dbname > /srv/www/$directory/$dbname-backup-prelaunch-$TS.sql
 
 # Export the development database
 printf "Exporting the development database...\n"
-mysqldump -u $devdbuser -p$devdbpass $devdbname > /srv/www/$devdirectory/$devdbname-launch-$TS.sql
+mysqldump -u $devdbuser -p'$devdbpass' $devdbname > /srv/www/$devdirectory/$devdbname-launch-$TS.sql
 
 # Import the development database into production
 printf "Importing the development database...\n"
-mysql -u $dbuser -p$dbpass $dbname < /srv/www/$devdirectory/$devdbname-launch-$TS.sql
+mysql -u $dbuser -p'$dbpass' $dbname < /srv/www/$devdirectory/$devdbname-launch-$TS.sql
 
 printf $DIVIDER
 
